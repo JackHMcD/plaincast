@@ -20,4 +20,5 @@ COPY . ${GOPATH}/src/github.com/aykevl/plaincast/
 RUN go get -v .
 RUN go install -i .
 
-ENTRYPOINT [ "plaincast" ]
+ENTRYPOINT [ "plaincast"]
+CMD ["-ao-pcm /tmp/snapcast"]
