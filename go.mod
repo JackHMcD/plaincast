@@ -1,3 +1,3 @@
-module github.com/aykevl/gotubecast
+module github.com/aykevl/plaincast
 
 go 1.16
