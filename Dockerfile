@@ -1,7 +1,7 @@
 FROM golang:alpine
 
 RUN apk add --no-cache --upgrade bash \
-      libmpv-dev \
+      mpv \
       yt-dlp
 
 WORKDIR ${GOPATH}/src/github.com/aykevl/plaincast/
