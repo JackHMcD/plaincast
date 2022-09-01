@@ -1,8 +1,18 @@
-FROM golang:alpine
+FROM golang
 
-RUN apk add --no-cache --upgrade bash \
-      mpv \
-      yt-dlp
+RUN \
+  apt update && \
+  DEBIAN_FRONTEND=noninteractive \
+    apt-get install -y --no-install-recommends \
+      libmpv-dev \
+      python-pip \
+  && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
+
+RUN \
+  pip install --no-cache youtube-dl \
+  && youtube-dl --version
 
 WORKDIR ${GOPATH}/src/github.com/aykevl/plaincast/
 COPY . ${GOPATH}/src/github.com/aykevl/plaincast/
