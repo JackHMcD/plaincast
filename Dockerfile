@@ -5,7 +5,7 @@ RUN \
   DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends \
       libmpv-dev \
-      python-pip \
+      python3-pip \
   && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
