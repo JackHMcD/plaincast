@@ -31,4 +31,4 @@ jobs:
           context: .
           platforms: linux/armhf
           push: true
-          tags: jackhmcd/gotubecast:latest
+          tags: jackhmcd/plaincast:latest
