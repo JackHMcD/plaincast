@@ -21,4 +21,4 @@ RUN go get -v .
 RUN go install -i .
 
 ENTRYPOINT [ "plaincast"]
-CMD ["-ao-pcm /tmp/snapcast"]
+
