@@ -21,5 +21,5 @@ RUN go get -v .
 RUN go install -i .
 RUN ls
 RUN pwd
-ENTRYPOINT ["plaincast"]
+ENTRYPOINT [ "/plaincast" ]
 
