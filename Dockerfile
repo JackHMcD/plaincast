@@ -9,12 +9,15 @@ RUN apk add --no-cache --upgrade bash \
   
 RUN pwd
 RUN  mkdir golang
-COPY . /go
+COPY . /go/src/github.com/tiuub/plaincast
 RUN cd golang
-RUN pwd
 RUN export GOPATH="`pwd`"
 
 RUN go install github.com/tiuub/plaincast@latest
+
+WORKDIR ${GOPATH}/src/github.com/tiuub/plaincast
+
+
 RUN pwd
 RUN ls
 
