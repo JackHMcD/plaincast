@@ -13,9 +13,6 @@ RUN cd golang
 
 RUN go install github.com/tiuub/plaincast@latest
 
-RUN ls
-RUN cd
-RUN ls
 
-ENTRYPOINT [ "bin/plaincast" ]
+ENTRYPOINT [ "/bin/sh" ]
 
