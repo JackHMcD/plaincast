@@ -14,7 +14,10 @@ WORKDIR /go
 
 RUN go install github.com/tiuub/plaincast@latest
 
-WORKDIR /go/src/github.com/tiuub/plaincast
+RUN pwd
+RUN ls
+
+WORKDIR /go/bin
 
 RUN pwd
 RUN ls
