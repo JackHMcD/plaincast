@@ -17,10 +17,10 @@ RUN go install github.com/tiuub/plaincast@latest
 RUN pwd
 RUN ls
 
-WORKDIR /go/bin
+
 
 RUN pwd
 RUN ls
 
-ENTRYPOINT [ "plaincast" ]
+ENTRYPOINT [ "bin/plaincast" ]
 
