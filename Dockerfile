@@ -4,7 +4,8 @@ RUN apk add --no-cache --upgrade bash \
     mpv-dev \
     mpv-libs \
     youtube-dl \
-    gcc
+    gcc \
+    g++
   
 RUN pwd
 RUN  mkdir golang
