@@ -8,11 +8,7 @@ RUN apk add --no-cache --upgrade bash \
     g++ \
     git
     
-RUN mkdir golang
-RUN cd golang
-
 RUN go install github.com/tiuub/plaincast@latest
 
-
-ENTRYPOINT [ "/bin/sh" ]
+ENTRYPOINT [ "/go/bin/plaincast" ]
 
