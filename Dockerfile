@@ -10,16 +10,11 @@ RUN apk add --no-cache --upgrade bash \
     
 RUN mkdir golang
 RUN cd golang
-RUN export GOPATH="`pwd`"
-RUN mkdir -p src/github.com/tiuub/plaincast
-RUN cd src/github.com/tiuub
-RUN git clone https://github.com/tiuub/plaincast.git
-RUN cd
-RUN cd golang
 
-RUN go install github.com/tiuub/plaincast
+RUN go install github.com/tiuub/plaincast@latest
 
 WORKDIR golang
+RUN ls
 
 ENTRYPOINT [ "bin/plaincast" ]
 
