@@ -13,12 +13,13 @@ RUN \
 RUN \
   pip install --no-cache youtube-dl \
   && youtube-dl --version
+  
+RUN  mkdir golang
+RUN cd golang
+RUN export GOPATH="`pwd`"
 
-WORKDIR ${GOPATH}/src/github.com/aykevl/plaincast/
-COPY . ${GOPATH}/src/github.com/aykevl/plaincast/
+RUN go install github.com/tiuub/plaincast@latest
 
-RUN go mod download
-RUN go build -o plaincast .
 
 RUN ["chmod", "+x", "entrypoint.sh"]
 ENTRYPOINT ["./entrypoint.sh"]
