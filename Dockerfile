@@ -13,7 +13,8 @@ RUN cd golang
 
 RUN go install github.com/tiuub/plaincast@latest
 
-WORKDIR golang
+RUN ls
+RUN cd
 RUN ls
 
 ENTRYPOINT [ "bin/plaincast" ]
