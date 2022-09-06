@@ -11,6 +11,6 @@ RUN apk add --no-cache --upgrade bash \
 RUN ln -sf python3 /usr/bin/python
 RUN go install github.com/tiuub/plaincast@latest
 
-ENTRYPOINT [ "/go/bin/plaincast -ao-pcm /tmp/snapcast" ]
+CMD [ "/go/bin/plaincast -ao-pcm /tmp/snapcast" ]
 
 
