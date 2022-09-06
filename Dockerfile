@@ -3,7 +3,8 @@ FROM golang:alpine
 RUN apk add --no-cache --upgrade bash \
     mpv-dev \
     mpv-libs \
-    youtube-dl
+    youtube-dl \
+    gcc
   
 RUN pwd
 RUN  mkdir golang
