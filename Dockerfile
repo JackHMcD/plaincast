@@ -17,7 +17,6 @@ RUN git clone https://github.com/tiuub/plaincast.git
 RUN cd
 RUN cd golang
 
-RUN go get github.com/tiuub/plaincast
 RUN go install github.com/tiuub/plaincast
 
 WORKDIR golang
