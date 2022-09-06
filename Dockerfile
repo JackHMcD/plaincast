@@ -7,6 +7,10 @@ RUN apk add --no-cache --upgrade bash \
     gcc \
     g++
   
+RUN pwd
+RUN ls
+
+WORKDIR /go
 
 RUN go install github.com/tiuub/plaincast@latest
 
