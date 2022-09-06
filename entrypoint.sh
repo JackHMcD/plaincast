@@ -1,2 +1,2 @@
 #!/bin/bash
-plaincast -ao-pcm /tmp/snapcast
+/src/github.com/tiuub/plaincast -ao-pcm /tmp/snapcast
