@@ -6,7 +6,7 @@ RUN apk add --no-cache --upgrade bash \
     youtube-dl \
     gcc \
     g++ \
-    git
+    python3
     
 RUN go install github.com/tiuub/plaincast@latest
 
