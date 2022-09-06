@@ -1,4 +1,4 @@
-FROM golang:alpine
+FROM golang:1.6-alpine
 
 RUN apk add --no-cache --upgrade bash \
     mpv-dev \
