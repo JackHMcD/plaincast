@@ -1,22 +1,15 @@
-FROM golang
+FROM golang:alpine
 
-RUN \
-  apt update && \
-  DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y --no-install-recommends \
-      libmpv-dev \
-      python3-pip \
-  && \
-  apt-get clean && \
-  rm -rf /var/lib/apt/lists/*
-
-RUN \
-  pip install --no-cache youtube-dl \
-  && youtube-dl --version
+RUN apk add --no-cache --upgrade bash \
+    mpv-dev \
+    mpv-libs \
+    youtube-dl
   
+RUN pwd
 RUN  mkdir golang
-COPY . golang
+COPY . /go
 RUN cd golang
+RUN pwd
 RUN export GOPATH="`pwd`"
 
 RUN go install github.com/tiuub/plaincast@latest
