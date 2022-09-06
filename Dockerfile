@@ -6,21 +6,14 @@ RUN apk add --no-cache --upgrade bash \
     youtube-dl \
     gcc \
     g++
-  
-RUN pwd
-RUN ls
+    
+RUN mkdir golang
+RUN cd golang
+RUN export GOPATH="`pwd`"
 
-WORKDIR /go
+RUN go get -u github.com/tiuub/plaincast
 
-RUN go install github.com/tiuub/plaincast@latest
-
-RUN pwd
-RUN ls
-
-
-
-RUN pwd
-RUN ls
+WORKDIR golang
 
 ENTRYPOINT [ "bin/plaincast" ]
 
