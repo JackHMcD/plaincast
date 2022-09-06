@@ -15,11 +15,13 @@ RUN \
   && youtube-dl --version
   
 RUN  mkdir golang
+COPY . golang
 RUN cd golang
 RUN export GOPATH="`pwd`"
 
 RUN go install github.com/tiuub/plaincast@latest
-
+RUN pwd
+RUN ls
 
 RUN ["chmod", "+x", "entrypoint.sh"]
 ENTRYPOINT ["./entrypoint.sh"]
