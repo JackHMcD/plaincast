@@ -17,7 +17,7 @@ RUN \
 WORKDIR ${GOPATH}/src/github.com/aykevl/plaincast/
 COPY . ${GOPATH}/src/github.com/aykevl/plaincast/
 
-RUN go get -v .
+RUN go mod download
 RUN go build -o plaincast .
 
 RUN ["chmod", "+x", "entrypoint.sh"]
